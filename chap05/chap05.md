@@ -31,11 +31,11 @@
 ![Android SDK](./image/AndroidSDK.png)  
 
 #### 配置 Android 模拟器运行环境  
-在`SDK Tools`界面下载安装`Intel x86 Emulator Accelerator (HAXM installer)`  
+* 在`SDK Tools`界面下载安装`Intel x86 Emulator Accelerator (HAXM installer)`  
 ![Intel x86 Emulator Accelerator (HAXM installer)](./image/Accelerator.png)  
 
 #### 配置 Gradle 编译环境  
-Android Studio Gradle 插件版本  
+* Android Studio Gradle 插件版本  
 ![Gradle 插件版本](./image/Gradleversion.png)  
 
 #### 问题及解决  
