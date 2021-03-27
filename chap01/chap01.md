@@ -10,7 +10,7 @@
  - [x] 对照第一章实验`无线路由器/无线接入点（AP）配置`列的功能清单，找到在`OpenWrt`中的配置界面并截图证明  
  - [x] 记录环境搭建步骤  
  - [x] 如果 USB 无线网卡能在`OpenWrt`中正常工作，则截图证明  
- - [ ] 如果 USB 无线网卡不能在`OpenWrt`中正常工作，截图并分析可能的故障原因并给出可能的解决方法  
+ - [x] 如果 USB 无线网卡不能在`OpenWrt`中正常工作，截图并分析可能的故障原因并给出可能的解决方法  
 
 ### 实验过程  
 #### 复习VirtualBox的配置与使用  
@@ -35,6 +35,7 @@
     按照bash中[提示信息](https://openwrt.org/docs/guide-user/virtualization/virtualbox-vm#convert_openwrtimg_to_vbox_drive)执行`dd`命令  
     `dd if=openwrt-19.07.5-x86-64-combined-squashfs.img of=openwrt-19.07.5-x86-64-combined-squashfs-padded.img bs=128000 conv=sync`  
     
+    格式转换成功：
    ![格式转换成功](./image/格式转换成功.png)  
    tip:别忘记把VirtualBox的路径加入到环境变量，来回找路径real麻烦！！！  
 4. 创建`OpenWrt`虚拟机  
@@ -96,7 +97,7 @@ opkg install kmod-ath9k-htc
 * 配置无线路由器使用自定义的DNS解析服务器  
 ![配置无线路由器使用自定义的DNS解析服务器](./image/配置无线路由器使用自定义的DNS解析服务器.png)  
 * 配置DHCP和禁用DHCP  
-![配置DHCP和禁用DHCP](./iamge/配置DHCP和禁用DHCP.png)  
+![配置DHCP和禁用DHCP](./image/配置DHCP和禁用DHCP.png)  
 * 开启路由器/AP的日志记录功能（对指定事件记录）  
 ![开启路由器/AP的日志记录功能](./image/开启路由器AP的日志记录功能.png)  
 * 配置AP隔离(WLAN划分)功能  
@@ -133,5 +134,7 @@ opkg install kmod-ath9k-htc
 解决方案：`opkg install hostapd wpa-supplicant --force-depends`  
 
 ##### 参考资料  
+[移动互联网安全第一章实验](https://c4pr1c3.github.io/cuc-mis/chap0x01/exp.html)  
 [OpenWrt on VirtualBox HowTo](https://openwrt.org/docs/guide-user/virtualization/virtualbox-vm)  
-[Cannot satisfy the following dependencies](https://blog.csdn.net/qiaoshuo/article/details/89443704)
+[Cannot satisfy the following dependencies](https://blog.csdn.net/qiaoshuo/article/details/89443704)  
+[opkg update失败问题解决](https://blog.csdn.net/qq_27508477/article/details/88370834?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.control&dist_request_id=1328741.14709.16168461453577307&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.control)  
