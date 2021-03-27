@@ -37,8 +37,8 @@
     按照bash中[提示信息](https://openwrt.org/docs/guide-user/virtualization/virtualbox-vm#convert_openwrtimg_to_vbox_drive)执行`dd`命令  
     `dd if=openwrt-19.07.5-x86-64-combined-squashfs.img of=openwrt-19.07.5-x86-64-combined-squashfs-padded.img bs=128000 conv=sync`  
     
-    格式转换成功：
-   ![格式转换成功](./image/格式转换成功.png)  
+    格式转换成功：  
+    ![格式转换成功](./image/格式转换成功.png)  
    tip:别忘记把VirtualBox的路径加入到环境变量，来回找路径real麻烦！！！  
 4. 创建`OpenWrt`虚拟机  
 ![创建虚拟机](./image/新建虚拟机.png)  
